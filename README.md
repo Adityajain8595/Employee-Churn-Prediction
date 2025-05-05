@@ -1,1 +1,110 @@
-"# Employee-Churn-Prediction" 
+# 🧠 Employee Churn Prediction using Decision Tree
+
+## 📘 Overview
+
+This project focuses on predicting **employee attrition (churn)** using structured HR data. A Decision Tree Classifier is used to model the likelihood of an employee leaving the company, based on various features such as satisfaction level, average monthly hours, promotion history, department, salary level and more.
+
+To enhance model accuracy and prevent overfitting, the pipeline includes **feature encoding**, **standardization**, **pruning (post)**, and **hyperparameter tuning** using both **GridSearchCV** and **RandomizedSearchCV**.
+
+---
+
+## 🎯 Problem Statement
+
+> Employee attrition poses a critical challenge to organizational stability and growth. This project aims to develop a machine learning model that predicts whether an employee is likely to leave the company based on HR-related numerical and categorical features. The objective is to support HR in proactively addressing employee dissatisfaction and improving retention strategies.
+
+---
+
+## 🗃️ Dataset
+
+- Contains features like:
+  - `satisfaction_level`
+  - `last_evaluation`
+  - `number_project`
+  - `average_monthly_hours`
+  - `time_spend_company`
+  - `work_accident`
+  - `promotion_last_5years`
+  - `salary` (categorical)
+  - `department` (categorical)
+
+- Target variable:
+  - `left` (1 = employee left, 0 = employee stayed)
+
+---
+
+## 🧪 Model Pipeline
+
+1. **Preprocessing**
+   - Label Encoding for `salary`
+   - One-Hot Encoding for `department`
+   - Standardization for numerical features
+
+2. **Model: Decision Tree Classifier**
+   - Trained on the processed data
+   - **Post-Pruning** with `max_depth` parameter tuning 
+   - Plotting the decision tree to analyze
+   
+3. **Hyperparameter Tuning**
+   - Performed using both:
+     - `GridSearchCV`: exhaustive parameter search
+     - `RandomizedSearchCV`: faster search over parameter distributions
+
+---
+
+## 🧠 Hyperparameters Tuned
+
+- `max_depth`
+- `max_features` 
+- `min_samples_leaf`
+- `criterion` (gini, entropy, log_loss)
+- `splitter` (best,random)
+- `min_impurity_decrease`
+
+---
+
+## 📊 Performance Metrics (Similar for both)
+
+- **Accuracy**: 98%
+- **Precision**: 98% (for both classes)
+- **Recall**:
+  - Class 0 (Stayed): 100%
+  - Class 1 (Left): 92%
+- **F1 Score**:
+  - Class 0: 99%
+  - Class 1: 95%
+
+> Metrics evaluated using a classification report on a test set.
+
+---
+
+
+## 🛠️ Tech Stack
+
+- Python
+- Scikit-learn
+- Pandas, NumPy
+- Matplotlib, Seaborn
+- Jupyter Notebook
+
+---
+
+## 🧩 How to Run
+
+1. Clone the repository:
+   
+   >> git clone https://github.com/Adityajain8595/Employee-Churn-Prediction.git
+
+   >> cd Employee-Churn-Prediction
+
+2. Run the notebook:
+
+   >> jupyter notebook attrition_model.ipynb
+
+## 📌 Conclusion
+
+This project demonstrates how structured HR data combined with a well-tuned decision tree model can effectively predict employee attrition, enabling organizations to take preventive retention actions based on data-driven insights.
+
+👤 Author
+Aditya Jain
+📧 [meaditya1103@gmail.com]
+🔗 [www.linkedin.com/in/aditya-jain-111832277]
