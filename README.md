@@ -1,4 +1,4 @@
-# 🧠 Employee Churn Prediction using Decision Tree
+# 🧠 Employee Churn Prediction
 
 ## 📘 Overview
 
