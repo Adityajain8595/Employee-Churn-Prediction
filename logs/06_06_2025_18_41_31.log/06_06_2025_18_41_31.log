@@ -1,0 +1,6 @@
+[ 2025-06-06 18:41:31,563 ] 97 werkzeug - WARNING -  * Debugger is active!
+[ 2025-06-06 18:41:31,579 ] 97 werkzeug - INFO -  * Debugger PIN: 126-521-761
+[ 2025-06-06 18:41:54,749 ] 97 werkzeug - INFO - 127.0.0.1 - - [06/Jun/2025 18:41:54] "POST /predictchurn HTTP/1.1" 200 -
+[ 2025-06-06 18:42:29,668 ] 97 werkzeug - INFO -  * Detected change in 'C:\\Users\\ADMIN\\anaconda3\\envs\\venv\\Lib\\site-packages\\IPython\\display.py', reloading
+[ 2025-06-06 18:42:29,747 ] 97 werkzeug - INFO -  * Detected change in 'C:\\Users\\ADMIN\\anaconda3\\envs\\venv\\Lib\\site-packages\\IPython\\core\\display_functions.py', reloading
+[ 2025-06-06 18:42:29,773 ] 97 werkzeug - INFO -  * Detected change in 'C:\\Users\\ADMIN\\anaconda3\\envs\\venv\\Lib\\site-packages\\IPython\\lib\\display.py', reloading

@@ -1,0 +1,18 @@
+[ 2025-06-06 17:23:23,792 ] 160 numexpr.utils - INFO - NumExpr defaulting to 4 threads.
+[ 2025-06-06 17:23:28,219 ] 24 root - INFO - Entered the data ingestion component
+[ 2025-06-06 17:23:28,265 ] 27 root - INFO - Read the dataset as Dataframe
+[ 2025-06-06 17:23:28,281 ] 30 root - INFO - Dropped the duplicate rows from the dataset
+[ 2025-06-06 17:23:28,476 ] 36 root - INFO - Train-test split initiated
+[ 2025-06-06 17:23:28,601 ] 42 root - INFO - Ingestion of the data has been completed
+[ 2025-06-06 17:23:28,695 ] 69 root - INFO - Read train and test datasets completed
+[ 2025-06-06 17:23:28,695 ] 71 root - INFO - Obtaining preprocessing object
+[ 2025-06-06 17:23:28,695 ] 33 root - INFO - Categorical columns: ['Department', 'salary']
+[ 2025-06-06 17:23:28,695 ] 34 root - INFO - Numerical columns: ['satisfaction_level', 'last_evaluation', 'number_project', 'average_montly_hours', 'time_spend_company', 'Work_accident', 'promotion_last_5years']
+[ 2025-06-06 17:23:28,695 ] 42 root - INFO - Numerical columns standard scaling completed
+[ 2025-06-06 17:23:28,695 ] 50 root - INFO - Categorical columns one-hot encoding completed
+[ 2025-06-06 17:23:28,695 ] 82 root - INFO - Applying preprocessor object on training dataframe and testing dataframe
+[ 2025-06-06 17:23:29,267 ] 92 root - INFO - Applied SMOTE to balance the training dataset
+[ 2025-06-06 17:23:29,267 ] 100 root - INFO - Saved preprocessing object
+[ 2025-06-06 17:23:29,267 ] 29 root - INFO - Split training and testing input data
+[ 2025-06-06 17:23:41,666 ] 48 root - INFO - Model Report: {'Decision Tree Classifier': (0.902317880794702, 1.0), 'Logistic Regression': (0.5534034311012729, 0.7968598026955676), 'K-Nearest Neighbours Classifier': (0.8070432868672047, 0.9693473274483909), 'Random Forest Classifier': (0.9379310344827586, 1.0), 'AdaBoost Classifier': (0.851031321619557, 0.9549626467449306), 'Gradient Boosting Classifier': (0.9243557772236076, 0.9748881512483764), 'XgBoost Classifier': (0.9332206255283179, 0.9978559176672385)}
+[ 2025-06-06 17:23:41,666 ] 61 root - INFO - Best model found on both training and testing data

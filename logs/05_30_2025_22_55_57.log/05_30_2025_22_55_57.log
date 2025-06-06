@@ -1,0 +1,12 @@
+[ 2025-05-30 22:55:58,493 ] 160 numexpr.utils - INFO - NumExpr defaulting to 4 threads.
+[ 2025-05-30 22:56:00,806 ] 24 root - INFO - Entered the data ingestion component
+[ 2025-05-30 22:56:00,837 ] 27 root - INFO - Read the dataset as Dataframe
+[ 2025-05-30 22:56:00,915 ] 33 root - INFO - Train-test split initiated
+[ 2025-05-30 22:56:00,978 ] 39 root - INFO - Ingestion of the data has been completed
+[ 2025-05-30 22:56:01,040 ] 68 root - INFO - Read train and test datasets completed
+[ 2025-05-30 22:56:01,040 ] 70 root - INFO - Obtaining preprocessing object
+[ 2025-05-30 22:56:01,040 ] 32 root - INFO - Categorical columns: ['satisfaction_level', 'last_evaluation', 'number_project', 'average_montly_hours', 'time_spend_company', 'Work_accident', 'promotion_last_5years']
+[ 2025-05-30 22:56:01,040 ] 33 root - INFO - Numerical columns: ['Department', 'salary']
+[ 2025-05-30 22:56:01,040 ] 41 root - INFO - Numerical columns standard scaling completed
+[ 2025-05-30 22:56:01,040 ] 49 root - INFO - Categorical columns one-hot encoding completed
+[ 2025-05-30 22:56:01,040 ] 81 root - INFO - Applying preprocessor object on training dataframe and testing dataframe

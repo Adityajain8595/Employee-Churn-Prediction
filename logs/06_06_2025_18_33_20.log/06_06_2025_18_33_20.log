@@ -1,0 +1,10 @@
+[ 2025-06-06 18:33:20,730 ] 97 werkzeug - WARNING -  * Debugger is active!
+[ 2025-06-06 18:33:20,730 ] 97 werkzeug - INFO -  * Debugger PIN: 126-521-761
+[ 2025-06-06 18:33:27,604 ] 97 werkzeug - INFO - 127.0.0.1 - - [06/Jun/2025 18:33:27] "GET /predictchurn HTTP/1.1" 200 -
+[ 2025-06-06 18:34:00,153 ] 97 werkzeug - INFO - 127.0.0.1 - - [06/Jun/2025 18:34:00] "POST /predictchurn HTTP/1.1" 200 -
+[ 2025-06-06 18:38:54,382 ] 97 werkzeug - INFO -  * Detected change in 'C:\\Users\\ADMIN\\OneDrive\\Documents\\Code\\12. Decision Tree\\Employee Churn Prediction\\app.py', reloading
+[ 2025-06-06 18:38:54,384 ] 97 werkzeug - INFO -  * Detected change in 'c:\\users\\admin\\onedrive\\documents\\code\\12. decision tree\\employee churn prediction\\app.py', reloading
+[ 2025-06-06 18:38:54,386 ] 97 werkzeug - INFO -  * Detected change in 'C:\\Users\\ADMIN\\OneDrive\\Documents\\Code\\12. Decision Tree\\Employee Churn Prediction\\app.py', reloading
+[ 2025-06-06 18:38:54,388 ] 97 werkzeug - INFO -  * Detected change in 'c:\\users\\admin\\onedrive\\documents\\code\\12. decision tree\\employee churn prediction\\app.py', reloading
+[ 2025-06-06 18:38:54,389 ] 97 werkzeug - INFO -  * Detected change in 'C:\\Users\\ADMIN\\OneDrive\\Documents\\Code\\12. Decision Tree\\Employee Churn Prediction\\app.py', reloading
+[ 2025-06-06 18:38:54,390 ] 97 werkzeug - INFO -  * Detected change in 'c:\\users\\admin\\onedrive\\documents\\code\\12. decision tree\\employee churn prediction\\app.py', reloading

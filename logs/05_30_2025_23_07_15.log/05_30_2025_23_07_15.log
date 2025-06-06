@@ -1,0 +1,17 @@
+[ 2025-05-30 23:07:16,163 ] 160 numexpr.utils - INFO - NumExpr defaulting to 4 threads.
+[ 2025-05-30 23:07:18,549 ] 24 root - INFO - Entered the data ingestion component
+[ 2025-05-30 23:07:18,572 ] 27 root - INFO - Read the dataset as Dataframe
+[ 2025-05-30 23:07:18,581 ] 30 root - INFO - Dropped the duplicate rows from the dataset
+[ 2025-05-30 23:07:18,628 ] 36 root - INFO - Train-test split initiated
+[ 2025-05-30 23:07:18,690 ] 42 root - INFO - Ingestion of the data has been completed
+[ 2025-05-30 23:07:18,737 ] 69 root - INFO - Read train and test datasets completed
+[ 2025-05-30 23:07:18,737 ] 71 root - INFO - Obtaining preprocessing object
+[ 2025-05-30 23:07:18,737 ] 33 root - INFO - Categorical columns: ['Department', 'salary']
+[ 2025-05-30 23:07:18,737 ] 34 root - INFO - Numerical columns: ['satisfaction_level', 'last_evaluation', 'number_project', 'average_montly_hours', 'time_spend_company', 'Work_accident', 'promotion_last_5years']
+[ 2025-05-30 23:07:18,737 ] 42 root - INFO - Numerical columns standard scaling completed
+[ 2025-05-30 23:07:18,737 ] 50 root - INFO - Categorical columns one-hot encoding completed
+[ 2025-05-30 23:07:18,753 ] 82 root - INFO - Applying preprocessor object on training dataframe and testing dataframe
+[ 2025-05-30 23:07:18,995 ] 92 root - INFO - Applied SMOTE to balance the training dataset
+[ 2025-05-30 23:07:18,995 ] 100 root - INFO - Saved preprocessing object
+[ 2025-05-30 23:07:18,995 ] 29 root - INFO - Split training and testing input data
+[ 2025-05-30 23:07:25,828 ] 60 root - INFO - Best model found on both training and testing data
