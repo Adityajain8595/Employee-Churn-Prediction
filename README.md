@@ -1,10 +1,10 @@
-# 🧠 Employee Churn Prediction using Decision Tree
+# 🧠 Employee Churn Prediction
 
 ## 📘 Overview
 
-This project focuses on predicting **employee attrition (churn)** using structured HR data. A Decision Tree Classifier is used to model the likelihood of an employee leaving the company, based on various features such as satisfaction level, average monthly hours, promotion history, department, salary level and more.
+This project focuses on predicting **employee attrition (churn)** using structured HR data. A XGBoost Classifier is used to model the likelihood of an employee leaving the company, based on various features such as satisfaction level, average monthly hours, promotion history, department, salary level and more.
 
-To enhance model accuracy and prevent overfitting, the pipeline includes **feature encoding**, **standardization**, **pruning (post)**, and **hyperparameter tuning** using both **GridSearchCV** and **RandomizedSearchCV**.
+To enhance model accuracy and prevent overfitting, the pipeline includes **feature encoding**, **standardization**, and **hyperparameter tuning** using **RandomizedSearchCV**.
 
 ---
 
@@ -34,44 +34,36 @@ To enhance model accuracy and prevent overfitting, the pipeline includes **featu
 
 ## 🧪 Model Pipeline
 
+1. **EDA**
+   - Data Preprocessing and Cleaning
+   - Made key insights about the characteristics of data
+   - Visualized relationships between features and identified key factors influencing employee churn 
+     
 1. **Preprocessing**
-   - Label Encoding for `salary`
-   - One-Hot Encoding for `department`
+   - One-Hot Encoding for `department` and `salary`
    - Standardization for numerical features
 
-2. **Model: Decision Tree Classifier**
-   - Trained on the processed data
-   - **Post-Pruning** with `max_depth` parameter tuning 
-   - Plotting the decision tree to analyze
+2. **Model Training**
+   - Trained 5+ classification models on the processed data
+   - Evaluated models on metrics such as accuracy, precision, recall, f1 score etc.
+   - Selected the stand-out models in terms of f1 score and later did hyperparameter tuning 
    
 3. **Hyperparameter Tuning**
-   - Performed using both:
-     - `GridSearchCV`: exhaustive parameter search
-     - `RandomizedSearchCV`: faster search over parameter distributions
-
+   - Performed using : `RandomizedSearchCV`: faster search over parameter distributions
+   - Optimized the model and selected XGBClassifier
 ---
 
-## 🧠 Hyperparameters Tuned
-
-- `max_depth`
-- `max_features` 
-- `min_samples_leaf`
-- `criterion` (gini, entropy, log_loss)
-- `splitter` (best,random)
-- `min_impurity_decrease`
-
----
 
 ## 📊 Performance Metrics (Similar for both)
 
 - **Accuracy**: 98%
 - **Precision**: 98% (for both classes)
 - **Recall**:
-  - Class 0 (Stayed): 100%
-  - Class 1 (Left): 92%
+  - Class 0 (Stayed): 99%
+  - Class 1 (Left): 91%
 - **F1 Score**:
   - Class 0: 99%
-  - Class 1: 95%
+  - Class 1: 94%
 
 > Metrics evaluated using a classification report on a test set.
 
@@ -102,9 +94,9 @@ To enhance model accuracy and prevent overfitting, the pipeline includes **featu
 
 ## 📌 Conclusion
 
-This project demonstrates how structured HR data combined with a well-tuned decision tree model can effectively predict employee attrition, enabling organizations to take preventive retention actions based on data-driven insights.
+This project demonstrates how structured HR data combined with a well-tuned model can effectively predict employee attrition, enabling organizations to take preventive retention actions based on data-driven insights.
 
 👤 Author
 Aditya Jain
 📧 [meaditya1103@gmail.com]
-🔗 [www.linkedin.com/in/aditya-jain-111832277]
+🔗 [www.linkedin.com/in/adityajain8595/]
