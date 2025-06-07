@@ -2,9 +2,9 @@
 
 ## 📘 Overview
 
-This project focuses on predicting **employee attrition (churn)** using structured HR data. A XGBoost Classifier is used to model the likelihood of an employee leaving the company, based on various features such as satisfaction level, average monthly hours, promotion history, department, salary level and more.
+This project focuses on predicting **employee churn** using structured HR data. A XGBoost Classifier is used to model the likelihood of an employee leaving the company, based on various features such as satisfaction level, average monthly hours, promotion history, department, salary level and more.
 
-To enhance model accuracy and prevent overfitting, the pipeline includes **feature encoding**, **standardization**, and **hyperparameter tuning** using **RandomizedSearchCV**.
+To enhance model accuracy and prevent overfitting, the pipeline includes **feature encoding**, **standardization**, and **oversampling** using **SMOTE**.
 
 ---
 
@@ -32,6 +32,55 @@ To enhance model accuracy and prevent overfitting, the pipeline includes **featu
 
 ---
 
+## 📁 Project Directory Structure
+
+EMPLOYEE CHURN PREDICTION/
+│
+├── 📁 artifacts/           # Preprocessed data and split into train and test datasets, with model and preprocessor files              
+│   ├── data.csv
+│   └── model.pkl
+│   └── preprocessor.pkl
+│   └── test.csv
+│   └── train.csv
+│
+├── 📁 Employee_Churn_Prediction.egg-info/                   # Stores dependencies and packages
+│   └── dependency_links.txt
+│   └── PKG-INFO
+│   └── requires.txt
+│   └── SOURCES.txt
+│   └── top_level.txt
+|
+├── 📁 logs/            # Logs folder
+|
+├── 📁 notebook/                                               # Jupyter notebooks and raw dataset
+│   └── 1. EDA-Employee Churn.ipynb
+│   └── 2. Model Training - Employee Churn Prediction.ipynb
+│   └── HR_dataset.csv
+│
+├── 📁 src/                       # Source code for pipeline and components
+│   └── __pycache__/
+│   ├── components/                # Data ingestion, data transformation, model training
+│   ├── pipeline/                  # Prediction pipeline
+│   ├── exception.py               # Exceptions
+│   ├── logger.py                  # Logging
+│   ├── utils.py                   # Utility functions
+│   └── __init__.py
+│
+├── 📁 templates/                  # HTML files for Flask frontend
+│   └── index.html
+│   └── home.html
+│
+├── 📁 visuals/                   # Images of visulizations in EDA
+│
+├── app.py                         # Flask app script
+├── requirements.txt               # Python dependencies
+├── setup.py                       # Package setup file
+├── README.md                      # Project documentation
+
+
+---
+
+
 ## 🧪 Model Pipeline
 
 1. **EDA**
@@ -39,33 +88,27 @@ To enhance model accuracy and prevent overfitting, the pipeline includes **featu
    - Made key insights about the characteristics of data
    - Visualized relationships between features and identified key factors influencing employee churn 
      
-1. **Preprocessing**
+2. **Preprocessing**
    - One-Hot Encoding for `department` and `salary`
    - Standardization for numerical features
+   - Oversampled the minority class using SMOTE.
 
-2. **Model Training**
+3. **Model Training**
    - Trained 5+ classification models on the processed data
    - Evaluated models on metrics such as accuracy, precision, recall, f1 score etc.
-   - Selected the stand-out models in terms of f1 score and later did hyperparameter tuning 
+   - Selected the best model - RandomForestClassifier in terms of f1 score.
    
-3. **Hyperparameter Tuning**
-   - Performed using : `RandomizedSearchCV`: faster search over parameter distributions
-   - Optimized the model and selected XGBClassifier
 ---
 
 
-## 📊 Performance Metrics (Similar for both)
+## 📊 Performance Metrics
 
 - **Accuracy**: 98%
-- **Precision**: 98% (for both classes)
-- **Recall**:
-  - Class 0 (Stayed): 99%
-  - Class 1 (Left): 91%
-- **F1 Score**:
-  - Class 0: 99%
-  - Class 1: 94%
+- **Precision**: 97%
+- **Recall**: 90%
+- **F1 Score**: 93%
 
-> Metrics evaluated using a classification report on a test set.
+> Metrics evaluated on a test set.
 
 ---
 
@@ -73,30 +116,34 @@ To enhance model accuracy and prevent overfitting, the pipeline includes **featu
 ## 🛠️ Tech Stack
 
 - Python
-- Scikit-learn
+- Scikit-learn, Imbalanced-learn
 - Pandas, NumPy
 - Matplotlib, Seaborn
+- Flask
 - Jupyter Notebook
 
 ---
 
-## 🧩 How to Run
+## 📊 Visualizations Used
 
-1. Clone the repository:
-   
-   >> git clone https://github.com/Adityajain8595/Employee-Churn-Prediction.git
+Here are some sample visualizations in the EDA notebook:-
 
-   >> cd Employee-Churn-Prediction
+![alt text](visuals/image.png)
+![alt text](visuals/image-1.png)
+![alt text](visuals/image-2.png)
+![alt text](visuals/image-3.png)
 
-2. Run the notebook:
+## Flask App Interface
 
-   >> jupyter notebook attrition_model.ipynb
+
+---
+
 
 ## 📌 Conclusion
 
 This project demonstrates how structured HR data combined with a well-tuned model can effectively predict employee attrition, enabling organizations to take preventive retention actions based on data-driven insights.
 
-👤 Author
+## 👤 Author
 Aditya Jain
 📧 [meaditya1103@gmail.com]
 🔗 [www.linkedin.com/in/adityajain8595/]
