@@ -88,6 +88,9 @@ Here are some sample visualizations in the EDA notebook:-
 ## Flask App Interface
 
 
+https://github.com/user-attachments/assets/127990ac-afc0-42f6-ae75-067c67623578
+
+
 ---
 
 
