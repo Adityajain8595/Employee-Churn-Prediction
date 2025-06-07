@@ -32,54 +32,6 @@ To enhance model accuracy and prevent overfitting, the pipeline includes **featu
 
 ---
 
-## 📁 Project Directory Structure
-
-EMPLOYEE CHURN PREDICTION/
-│
-├── 📁 artifacts/           # Preprocessed data and split into train and test datasets, with model and preprocessor files              
-│   ├── data.csv
-│   └── model.pkl
-│   └── preprocessor.pkl
-│   └── test.csv
-│   └── train.csv
-│
-├── 📁 Employee_Churn_Prediction.egg-info/                   # Stores dependencies and packages
-│   └── dependency_links.txt
-│   └── PKG-INFO
-│   └── requires.txt
-│   └── SOURCES.txt
-│   └── top_level.txt
-|
-├── 📁 logs/            # Logs folder
-|
-├── 📁 notebook/                                               # Jupyter notebooks and raw dataset
-│   └── 1. EDA-Employee Churn.ipynb
-│   └── 2. Model Training - Employee Churn Prediction.ipynb
-│   └── HR_dataset.csv
-│
-├── 📁 src/                       # Source code for pipeline and components
-│   └── __pycache__/
-│   ├── components/                # Data ingestion, data transformation, model training
-│   ├── pipeline/                  # Prediction pipeline
-│   ├── exception.py               # Exceptions
-│   ├── logger.py                  # Logging
-│   ├── utils.py                   # Utility functions
-│   └── __init__.py
-│
-├── 📁 templates/                  # HTML files for Flask frontend
-│   └── index.html
-│   └── home.html
-│
-├── 📁 visuals/                   # Images of visulizations in EDA
-│
-├── app.py                         # Flask app script
-├── requirements.txt               # Python dependencies
-├── setup.py                       # Package setup file
-├── README.md                      # Project documentation
-
-
----
-
 
 ## 🧪 Model Pipeline
 
